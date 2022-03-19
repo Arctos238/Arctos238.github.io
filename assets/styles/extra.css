@@ -25,6 +25,7 @@ header {
 
 
 header h1 {
+    margin-top: 5px;
     margin: 0;
     font-size: 48px;
     color: #2FCC76;
