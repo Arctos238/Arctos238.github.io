@@ -1,121 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>What is Spring Boot Blog</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About Me</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="https://github.com/Arctos238">My Projects</a></li>
-                    </ul>
-                </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>What is Spring Boot Blog</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html"
+                >About Me</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
+                href="https://github.com/Arctos238"
+                >My Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Header-->
+    <header
+      class="masthead"
+      style="background-image: url('assets/img/spring-boot-image.png')"
+    >
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="post-heading">
+              <h1>How Java Is Staying Modern: Spring Boot REST APIs</h1>
+              <h2 class="subheading">Building Quick and Easy Java Apps</h2>
+              <span class="meta">
+                Posted by
+                <a href="./index.html">J Pointer</a>
+                on February 14th, 2023
+              </span>
             </div>
-        </nav>
-        <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/spring-boot-image.png')">
-            <div class="container position-relative px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="post-heading" >
-                            <h1>How Java Is Staying Modern: Spring Boot REST APIs</h1>
-                            <h2 class="subheading">Building Quick and Easy Java Apps</h2>
-                            <span class="meta">
-                                Posted by
-                                <a href="./index.html">J Pointer</a>
-                                on February 14th, 2023
-                            </span>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <section>
+              <p>
+                Have you ever found Java to require so much work to setup a
+                simple application? Wouldn’t it be nice to have a preconfigured
+                way to build a Java Application quickly and bring Java back to
+                the modern standard of development? What if I told you there was
+                solution, Spring Boot.
+              </p>
+              <p>
+                This popular Java framework allows for building and deploying
+                web application quickly. This framework is a sub framework of
+                Spring. This doesn’t mean that Spring Boot is a competitor for
+                Spring but a tool within the Spring technology.
+              </p>
+            </section>
+            <section>
+              <h2 class="section-heading">Wait a second, REST what?</h2>
+              <p>
+                REST API or RESTful Web Service is probably one of the best
+                technologies we can use to connect backend applications to
+                frontend applications like React, Angular for example. So, what
+                is REST? Representational State Transfer (REST) is an
+                architecture design for sending data. It allows us to create
+                endpoints on the web to send data from one application to
+                another application via JSON (JavaScript Object Notation).
+              </p>
+              <p>
+                You may asking why is this so revolutionizing and why do I hear
+                about it everywhere? Well imagine you have an application,
+                written in Java (Can be written in any language), that controls
+                the persistence and retrieval of data from a database. Then you
+                have a React Application (Written in JavaScript/JSX) that
+                display information on the web. Now they are both written in two
+                completely different languages, how can we connect them
+                together?
+              </p>
+              <p>
+                The answer is REST APIs. Not only can you retrieve the data, but
+                it allows you to perform CRUD (Create, Read, Update, Delete)
+                operations on that data, allowing Java and JavaScript to
+                communicate to one another through HTTP requests.
+              </p>
+              <img
+                class="img-fluid mt-2"
+                src="assets/img/rest-api-arc.png"
+                alt="REST API Architecture Designed By Jacque Pointer"
+              />
+              <span class="caption text-muted">RESTful API Architecture</span>
+              <p>
+                Here is how of how a REST API works, the REST API web server
+                will host four HTTP request and allows the Web Application to
+                send one of four requests:
+              </p>
+              <ul>
+                <li>GET – Obtains the information from the database.</li>
+                <li>POST – Save the information to the database.</li>
+                <li>PUT – Update the information to the database.</li>
+                <li>DELETE – Delete the information from the database.</li>
+              </ul>
+              <p>
+                Theses requests receive and send JSON objects through the REST
+                API. The backend application will then convert the JSON from a
+                POJO (Plain Old Java Object), if using Java for instance, or to
+                a POJO to allow the REST application to perform a CRUD operation
+                based on the request sent.
+              </p>
+            </section>
+            <section>
+              <h2 class="section-heading">What is this Spring you talk off?</h2>
+              <a href="https://spring.io/"
+                ><img
+                  class="img-fluid mt-2"
+                  src="assets/img/spring-logo.png"
+                  alt="Spring Logo"
+              /></a>
+              <p>
+                Spring is a popular framework for building Java applications.
+                This framework is amazing as it can be used to build many types
+                of applications including, MVC (Model View Controller) full
+                stack websites, RESTful API’s, Hibernate Persistence (Proprietor
+                version of JPA), Spring Messaging (Message based applications).
+              </p>
+              <p>
+                Spring is a combinations of libraries (JAR files) which have
+                done all the heavy lifting for us and only require us the write
+                boiler plate and the configuration. Its very easy to setup with
+                a project, as all you need to do is includes these JAR files
+                into the project’s build path.
+              </p>
+              <p>
+                So why use Spring over standard Java? Well Java has no
+                structure, you are free to build an application in any way you
+                want, which sounds great but when it comes to collaborating
+                other developers, and not having theses guidelines that Spring
+                offers, can often lead confusion about the code they wrote. This
+                is one useful reason to use Spring, because it has libraries
+                already made and ready to use, all you need to do is follow
+                their guidelines for the configurations. This makes building
+                projects quick and easy for everybody.
+              </p>
+              <p>
+                The other great thing is because everyone is following theses
+                guidelines it makes the code more maintainable and easier for
+                other developers working on the project in the future.
+              </p>
+              <img
+              class="img-fluid mt-2"
+              src="assets/img/spring-controller-code.png"
+              alt="Spring Controller Class Code By Jacque Pointer"
+            />
+            <span class="caption text-muted">Spring Controller Class</span>
+            <img
+            class="img-fluid mt-2 w-l"
+            src="assets/img/java-code-mvc.png"
+            alt="Java Controller Class Code By Jacque Pointer"
+          />
+          <span class="caption text-muted">Java Servlet Class</span>
+              <p>
+                Examining both Java classes above for mapping HTTP requests to
+                your web application, you can tell by looking at the Servlet
+                Class (Standard Java) that this code is a lot harder to memorize
+                versus the Spring Controller Class (Spring's version of a
+                Servlet). There is no need to extend classes or Override
+                Methods, simply just use the @ notations provided by Spring and
+                let it do all the work for you.
+              </p>
+              <p>
+                Although Spring is great, it does come with some downsides one
+                of them being the amount of configuration needed is tedious and
+                very prone to human error. Another thing is the need to use a
+                separate web server to run the Web Applications which is also
+                another thing to configurate. Lucky for us, this is where Spring
+                Boot comes in.
+              </p>
+            </section>
+            <section>
+              <h2 class="section-heading">Finally, lets talk Spring Boot</h2>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/jacque-pointer-a41536208/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/Arctos238">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div class="small text-center text-muted fst-italic">
+              Copyright &copy; J Ri P 2023
             </div>
-        </header>
-        <!-- Post Content-->
-        <article class="mb-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Have you ever found Java to require so much work to setup a simple application? Wouldn’t it be nice to have a preconfigured way to build a Java Application quickly and bring Java back to the modern standard of development? What if I told you there was solution, Spring Boot.</p>
-                        <p>This popular Java framework allows for building and deploying web application quickly.  This framework is a sub framework of Spring. This doesn’t mean that Spring Boot is a competitor for Spring but rather a tool within the Spring technology.</p>
-                        <p>Before I explain what Spring Boot can do, I must first explain what can be done with Spring. Showing you the amazing benefits that come from learning such an advanced tool.</p>
-                        <h2 class="section-heading">What is Spring?</h2>
-                        <a href="https://spring.io/"><img class="img-fluid mt-2" src="assets/img/spring-logo.png" alt="Spring Logo" /></a>
-                        <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
-                        <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
-                        <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
-                        <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
-                        <h2 class="section-heading">The Final Frontier</h2>
-                        <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-                        <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-                        <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-                        <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
-                        <h2 class="section-heading">Reaching for the Stars</h2>
-                        <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-                        <a href="#!"><img class="img-fluid" src="assets/img/post-sample-image.jpg" alt="..." /></a>
-                        <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
-                        <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-                        <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-                        <p>
-                            Placeholder text by
-                            <a href="http://spaceipsum.com/">Space Ipsum</a>
-                            &middot; Images by
-                            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <!-- Footer-->
-        <footer class="border-top">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="https://www.linkedin.com/in/jacque-pointer-a41536208/">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://github.com/Arctos238">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; J Ri P 2023</div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
