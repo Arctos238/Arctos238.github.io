@@ -286,6 +286,7 @@
                     <li class="mb-4">3. Annotation @GetMapping("date"): When this method is called it will return the current date and time. The Annotation tells the web application that when a get request is sent to the endpoint /api/date to call the method attached (which return the current date and time).</li>
                   </ul>
                   <img class="img-fluid mt-2 mb-4" src="assets/img/date-rest-controller.png" alt="Java Create Package">
+                  <p>The REST Controller will use a library called Jackson to convert the POJO to JSON to be sent via the GET request. Jackson also converts the JSON information coming in to a POJO. This process is fully automatic and needs no configuring</p>
                 </section>
                 <section>
                   <h3>Starting The Application</h3>
