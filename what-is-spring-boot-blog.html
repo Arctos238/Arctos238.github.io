@@ -231,6 +231,70 @@
             </section>
             <section>
               <h2 class="section-heading">Finally, lets talk Spring Boot</h2>
+              <p>The Spring Boot is a tool complements the spring applications in multiple ways. It allows us to develop applications faster, uses default configurations and allows for easy deployment.</p>
+              <p>The most amazing thing about Spring Boot is the ability to develop applications much faster by allowing us to configure dependencies very quickly. This can be by embedding servers like tomcat into the application or adding database connection quickly or even adding security dependency quickly. </p>
+              <img
+              class="img-fluid mt-2"
+              src="assets/img/spring-init.png"
+              alt="Spring initlizr Website"
+            />
+            <p>
+              By going to <a href=https://start.spring.io>Spring  Initializr</a> you can quickly build a spring boot application to open with your IDE. On the right side of the website, you can see the dependencies I have added. 
+            </p>
+            <p>This means that you don’t need a separate external jar files for databases or to have a seperate web server connected to the application. Its can be automatically built in with the Spring Boot Application, allowing for easily deployable application. </p>
+            <p>Spring Boot eliminates most of the boiler code that is needed from Spring applications by having opinionated defaults settings. Its still highly customized and easy to change theses settings but its not needed most of the time. </p>
+            <p>As you can see Spring Boot is a great addition inside the Spring toolset. </p>
+            </section>
+             <section>
+                <h2 class="section-heading">The Modern Java Application, Creating A Simple Date Endpoint</h2>
+                <p>We can use all these technologies together to build a modern Java backend application which we can be connected to a frontend web application like React, Angular or Vue. It can even be used to create APIs for other companies access your data in JSON format.</p>
+                <p>Let’s break down how to build a RESTful API with Spring Boot. </p>
+                <section> 
+                  <h3>Setup</h3>
+                  <p>The first step is to go to the  <a href=https://start.spring.io/ >Spring Initializr</a> to setup the Spring Boot Application.</p>
+                  <img  class="img-fluid mt-2" src="assets/img/spring-init-setup.png" alt="Setup Spring Boot">
+                  <p>1. The option we will choice for this application is Maven as the project build.</p>
+                  <p>2. Java as the language and Spring Boot version 3.0.2 <i>(Select the most recent version that isn't a snapshot).</i></p>
+                  <p>3. Name the application.</p>
+                  <p>4. For the packaging we want it to be embedded with a web server for an easier way to deploy the application so we will select Jar rather then using a War file to deploy.</p>
+                  <p>5. Select your Java Version, for this I will select Version 17.</p>
+                  <p>6. Dependencies:</p>
+                  <ul>
+                    <li class="mb-3">Spring Web: This dependency contains everything needed to create REST Controller for a web application and embeds the Tomcat server into our application</li>
+                    <li class="mb-3">Spring Boot DevTools: This dependency is great to use when building an application as when you make changes to the code or a propertie file, it will rebuild the application automatically allowing for LiveReload.</li>
+                    <li class="mb-3">Spring Data JPA: Allows use of Hibernate (JPA). (Do Not use For This Application as we will not be connecting a database)</li>
+                    <li class="mb-3">MySQL Driver: Select your database Driver <i>(depending on what type of Database you are using)</i> to use for the application. (Do Not use For This Application as we will not be connecting a database)</li>
+                  </ul>
+                  <p>Click Generate to download the initializr project and unzip the project</p>
+                </section>
+                <section>
+                  <h3>Creating the REST Controller (Eclipse)</h3>
+                  <p>First we need to import the initializr project</p>
+                  <p>As we are using a Maven build, we must import the project as an existing Maven project into the IDE</p>
+                  <img class="img-fluid mt-2" src="assets/img/import-project.png" alt="Java import Maven Project">
+                  <p>Select the directory where you unzipped the project.</p>
+                  <p>Then select the pom.xml file and click finish.</p>
+                  <img class="img-fluid mt-2" src="assets/img/Import-finish.png" alt="Java import Maven Project">
+                  <p>Go to src/main/java source folder and create a new package which is a sub package of the main package of the application ie. ca.sait.blogdemo.restcontrollers</p>
+                  <p>The Spring Boot application has been setup to scan all sub directory packages of the main application's package.</p>
+                  <p>Create a new class file called DateRestController.java</p>
+                  <img class="img-fluid mt-2" src="assets/img/create-package.png" alt="Java Create Package">
+                  <p>It only takes three steps to create this simple REST controller</p>
+                  <ul>
+                    <li>1. Annotation @RestController: This tells the Spring Boot Application that this is a REST Controller</li>
+                    <li>2. Annotation @Request Mapping("/api"): This will setup the web application end point to /api for this controller</li>
+                    <li>3. Annotation @GetMapping("date"): When this method is called it will return the current date and time. The Annotation tells the web application that when a get request is sent to the endpoint /api/date to call the method attached (which return the current date and time).</li>
+                  </ul>
+                  <img class="img-fluid mt-2 mb-4" src="assets/img/date-rest-controller.png" alt="Java Create Package">
+                </section>
+                <section>
+                  <h3>Starting The Application</h3>
+                  <p>Now simply start the application by clicking run BlogDemoApplication in the root package folder.</p>
+                  <p>Once the application has loaded, simply go to your web browser and type http://localhost:8080/api/date or click <a href="http://localhost:8080/api/date">here</a> and you will see the current date and time.</p>
+                  <img class="img-fluid mt-2 mb-4" src="assets/img/get-request-date.png" alt="Get Request Date">
+                  <p>Click the link to find source code for this simple date application: <a href="https://github.com/Arctos238/rest-blog-demo-one">link</a></p>
+                  <p>As you can see its very simple to create a REST API. Using this combined with a database allows you to use Java in the modern web development world.</p>
+                </section>
             </section>
           </div>
         </div>
