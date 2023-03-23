@@ -148,7 +148,8 @@
                 <p>
                   Once you have completed the installation, download
                   <a
-                    href="https://dev.mysql.com/doc/refman/8.0/en/windows-installation.html"
+                    href="./assets/files/blog-setup-script.sql"
+                    download
                     target="_blank"
                     >this</a
                   >
@@ -166,15 +167,15 @@
                   will enter some dummy data to get us started.
                 </p>
                 <p>
-                  MySQL is very similar to Oracle, so I won't go into the the
+                  MySQL is very similar to Oracle, so I won't go into the
                   details on the differences but click
                   <a
                     href="https://www.integrate.io/blog/oracle-vs-mysql/#:~:text=MySQL%20supports%20full%2Dtext%20and,for%20small%20to%20medium%20scale."
-                    target="_blank
-                    "
+                    target="_blank"
                     >here</a
                   >
-                  for details on the differences.
+                  for more details on MySQL (including the differences from
+                  Oracle).
                 </p>
                 <img
                   class="img-fluid mt-2"
@@ -182,6 +183,74 @@
                   alt="MySQL Script for the Demo"
                 />
                 <span class="caption text-muted">Demo MySQL Script</span>
+              </section>
+              <section>
+                <h3>Downloading the Spring Boot Starter Project</h3>
+                <p>
+                  Lastly we will configure the project and download the project
+                  initializr files
+                </p>
+                <p>
+                  Go to
+                  <a
+                    href="https://start.spring.io/
+                  "
+                    target="_blank"
+                    >this</a
+                  >
+                  website to configurate the starter project.
+                </p>
+                <img
+                  class="img-fluid mt-2"
+                  src="assets/img/spring-boot-init-first.jpg"
+                  alt="Default Spring Boot configurate Website"
+                />
+                <span class="caption text-muted"
+                  >Default Configurate Page Spring Boot</span
+                >
+                <p>Steps: <ol>
+                  <li>Project - Maven</li>
+                  <li>Language - Java</li>
+                  <li>
+                    Spring Boot - 3.0.4 (Any Current Version that isn't SNAPSHOT
+                    will do)
+                  </li>
+                  <li>
+                    Packaging - Jar (Allows us to package the application up
+                    into a runnable Jar file)
+                  </li>
+                  <li>Java Version - 17</li>
+                  <li>
+                    Dependencies -
+                    <ul>
+                      <li>
+                        Spring Web (Embedded webserver and REST Controller) -
+                        <b>Required</b>
+                      </li>
+                      <li>
+                        Spring Boot DevTools (Mainly for LiveReload and fast
+                        restarts when making changes) - <b>Not Required</b>
+                      </li>
+                      <li>
+                        MySQL Driver (Established the connection to the
+                        database) - <b>Required</b>
+                      </li>
+                      <li>
+                        Spring Data JPA (Interaction with the database) -
+                        <b>Required</b>
+                      </li>
+                    </ul>
+                  </li>
+                </ol></p>
+                <img
+                class="img-fluid mt-2"
+                src="assets/img/spring-boot-init-second.jpg"
+                alt="Default Spring Boot configurate Website"
+              />
+              <span class="caption text-muted"
+                >Demo Configurate Page Spring Boot</span
+              >
+                <p>Click generate to download initalizr project. Click <a href="./assets/files/demo.zip" download>here</a> for the same initalizr project as above.</p>
               </section>
             </section>
           </div>
