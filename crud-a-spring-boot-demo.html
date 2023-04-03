@@ -93,7 +93,7 @@
     <article class="mb-4">
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
-          <div class="col-md-10 col-lg-8 col-xl-7">
+          < class="col-md-10 col-lg-8 col-xl-7">
             <section>
               <h2 class="section-heading" style="margin-bottom: 20px">
                 The Setup
@@ -314,9 +314,13 @@
                   <li>dialect = MySQL5Dialect to tell hibernate that the DB is MySQL and that this is the langauage to interact with the application.</li>
                   <li>port = Normally set to 8080 but you can set it to any port number you have avaiable</li>
                 </ul>
-                <section>
+                </section>
+                <section> 
+                  <h1>Creating the application</h1>
+                  <p>This section is about programming the application. I will keep things short and explain the important details as we go along.</p>
+                <section name="application-part">
                   <h2 class="section-heading" style="margin-bottom: 20px">Entity/POJO</h2>
-                  <p>Time to program. First we will create the entities for the application. Student and Degree willl be our entities.</p>
+                  <p>First we will create the entities for the application. Student and Degree willl be our entities.</p>
                   <p>We will create a package called entity (crud.rest.demo.entity). This package must be under this domain in order for the Spring Boot application to scan the annotations automatically.</p>
                   <p>Then we will create two entities under that package, Student and Degree. Lets start with coding the Student Entity.</p>
                   <img
@@ -373,26 +377,209 @@
                 alt="Default Spring Boot configurate Website"
                 />
                 <span class="caption text-muted"
-                >Student Class- Getters/Setters</span
+                >Student Class - Getters/Setters</span
                 >
-                <p>Lastly, we create normal getters and setters for that Student class.</p>
+                <p>Lastly, we create normal getters and setters for the Student class.</p>
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/entity/degree1.jpg"
                 alt="Default Spring Boot configurate Website"
                 />
+                <span class="caption text-muted"
+                >Degree Class</span
+                >
                 <p>Finally, we do this all again but for the Degree class. Nothing new here.</p>
-                <p>Github <a href="">Link</a> for the entities.</p>
-               
-               
-                
+                <p>Github <a href="https://github.com/Arctos238/REST-CRUD-Demo-Application-Blog/tree/main/REST-CRUD-App/demo/demo/src/main/java/crud/rest/demo/entity">Link</a> for the entities.</p>  
                 </section>
                 <section>
-                  <h2 class="section-heading" style="margin-bottom: 20px">Rest Controller</h2>
-                  <p>Next we are going to create the REST Controllers for this application. For this application we need two controllers.</p>
-                  <p>First controller will be for the students.</p>
+                  <h2 class="section-heading" style="margin-bottom: 20px">Persistence (Hibernate)</h2>
                 </section>
+                <p>The next thing we need to do is to create our persistence classes to enable CRUD (Create, Read, Update, Delete) on the database.</p>
+                <p>First, we create a new package called DAO (Data Access Object), crud.rest.demo.DAO. Then we create an interface class for the StudentDAO class.</p>    
+                <img
+                class="img-fluid mt-2"
+                src="assets/img/DAO/student_interface.jpg"
+                alt="Default Spring Boot configurate Website"
+                />
+                <span class="caption text-muted"
+                >StudentDAO Interface</span
+                >
+                <p>The interface just has the four methods we will use for the CRUD operations.</p>
+                <ul>
+                  <li>findAll - Find all students in the database</li>
+                  <li>saveStudent - Save a new student into the database</li>
+                  <li>updateStudent - Update a student in the database with the new details</li>
+                  <li>deleteStudent - Delete a student from the database</li>
+                </ul>
+                <p>Next, we will create the DAO class and implement these methods.</p>
+                <img
+                class="img-fluid mt-2"
+                src="assets/img/DAO/dao-1.jpg"
+                alt="Default Spring Boot configurate Website"
+                />
+                <span class="caption text-muted"
+                >StudentDAO class</span
+                >
+                <p>We start by creating the class, implementing the interface and create a field. The EntityManager object is what connect to the database and has pre-built methods for us to use within our methods to perform the CRUD operations.</p>
+                <p>We use the annotation @Autowired to tell Spring to create this object, using this constructor when the application initalizes.</p>
+                <img
+                class="img-fluid mt-2"
+                src="assets/img/DAO/dao-3.jpg"
+                alt="Default Spring Boot configurate Website"
+                />
+                <span class="caption text-muted"
+                >StudentDAO class</span
+                >
+                <p>Then inside of each method we perform the operations using the entityManager object. We will use the operations below to create the methods.</p>
+                <ul>
+                  <li>@Transactional = Creates a single transaction for this method.</li>
+                  <li>currentSession.createQuery = Create a query to perform on the database.</li>
+                  <li>currentSession.save = Saves the object to the database.</li>
+                  <li>currentSession.merge = Merges the object with the existing object in the database.</li>
+                  <li>currentSession.find = Creates an object from the table with this ID.</li>
+                  <li>currentSession.delete = Delete the record from the table inside the database from the object passed.</li>
+                </ul>
+                <p>Now that all theses methods are created, we can move on to the final part of the application.</p>
             </section>
+                <section>
+                  <h2 class="section-heading" style="margin-bottom: 20px">Rest Controller</h2>
+                  <p>Next we are going to create the REST Controller for this application. The controller is used to map the endpoints with the HTTP requests and control the data coming in and out.</p>
+                  <p>Let start with the boiler plate for the Student Rest Controller Class.</p>
+                  <img
+                  class="img-fluid mt-2"
+                  src="assets/img/restController/controller1.jpg"
+                  alt="Default Spring Boot configurate Website"
+                  />
+                  <span class="caption text-muted"
+                  >Student Rest Class</span
+                  >
+                  <p>We create the class and initalize the class with the studentDAO object in order to perform the operations. </p>
+                  <ul>
+                    <li>@RestController - Informs Spring that this is a Rest Controller class.</li>
+                    <li>@RequestMapping - Create an endpoint at the string passed (localhost:8080/api).</li>
+                  </ul>
+                  <p>Next we fill out the methods with the endpoints and HTTP requests.</p>
+                  <img
+                  class="img-fluid mt-2"
+                  src="assets/img/restController/controller2.jpg"
+                  alt="Default Spring Boot configurate Website"
+                  />
+                  <span class="caption text-muted"
+                  >Student Rest Class</span
+                  >
+                  <ul>
+                    <li>@GetMapping - Creates a GET endpoint at localhost:8080/api/students, which will be used to obtain the students from the database.</li>
+                    <li>@PostMapping - Creates a POST endpoint at localhost:8080/api/students, which will be used to save a new student to the database.</li>
+                    <li>@PutMapping - Creates a PUT endpoint at localhost:8080/api/students, which will be used to update a student to the database.</li>
+                    <li>@DeleteMapping - Creates a DELETE endpoint at localhost:8080/api/students/{studentId}, which will be used to delete a student from the database with the student id (replace the {studentId with the id you want to replace}).</li>
+                    <li>@RequestBody - Obtains the JSON inside the body of the request and creates a student object (jackson automatically converts the JSON for us). </li>
+                    <li>@PathVariable - Converts the {studentId} into an int for the method to use.</li>
+                  </ul>
+                  <p>Now we just finish writing the methods by using the StudentDAO class to perform the CRUD operations for us.</p>
+                  <img
+                  class="img-fluid mt-2"
+                  src="assets/img/restController/controller3.jpg"
+                  alt="Default Spring Boot configurate Website"
+                  />
+                  <span class="caption text-muted"
+                  >Student Rest Class</span
+                  >
+                  <p>Now the application has been completed. Github <a href="https://github.com/Arctos238/REST-CRUD-Demo-Application-Blog/tree/main/REST-CRUD-App">Link</a> for the REST application section.</p>
+             </section>
+             <section>
+              <h1>Testing</h1>
+              <p>Now we will test each endpoint to ensure that they are working. For this we will use the Postman application. You can download it <a href="https://www.postman.com/downloads/">here</a>.</p>
+              <p>Postman just allows us to perform HTTP request, which will allow us test our REST application.</p>
+              <h2>GET Request Test</h2>
+              <p>We will perform a GET request at the URL localhost:8080/api/students</p>
+              <img
+                  class="img-fluid mt-2"
+                  src="assets/img/postman/findAll.jpg"
+                  alt="Default Spring Boot configurate Website"
+                  />
+                  <span class="caption text-muted"
+                  >GET Request</span
+                  >
+              <p>At the bottom, we can see that all the student have been converted into JSON for us, which was obtained from the database.</p>
+              <h2>POST Request Test</h2>
+              <p>We will perform a POST request at the URL localhost:8080/api/students</p>
+              <img
+                  class="img-fluid mt-2"
+                  src="assets/img/postman/save-1.jpg"
+                  alt="Default Spring Boot configurate Website"
+                  />
+                  <span class="caption text-muted"
+                  >POST Request</span
+                  >
+            <p>For this, we need to set the JSON object inside the body of the reqeust as RAW/JSON data.</p>
+            <img
+            class="img-fluid mt-2"
+            src="assets/img/postman/save-2.jpg"
+            alt="Default Spring Boot configurate Website"
+            />
+            <span class="caption text-muted"
+            >POST Request - Complete</span
+            >
+            <p>As you can see the data was now saved into the database.</p>
+            <h2>PUT Request Test</h2>
+            <p>We will perform a PUT request at the URL localhost:8080/api/students</p>
+            
+            <img
+            class="img-fluid mt-2"
+            src="assets/img/postman/update-1.jpg"
+            alt="Default Spring Boot configurate Website"
+            />
+            <span class="caption text-muted"
+            >PUT Request - Obtain Object</span
+            >
+            <p>We will update the student with the studentId 1.</p>
+            <img
+            class="img-fluid mt-2"
+            src="assets/img/postman/update-2.jpg"
+            alt="Default Spring Boot configurate Website"
+            />
+            <span class="caption text-muted"
+            >PUT Request - Update Object</span
+            >
+            <p>Lets change her last name to Robert and here degree to id 8.</p>
+            <img
+            class="img-fluid mt-2"
+            src="assets/img/postman/update-3.jpg"
+            alt="Default Spring Boot configurate Website"
+            />
+            <span class="caption text-muted"
+            >PUT Request - Complete</span
+            >
+            </section>
+            <p>As you can see here last name has changed to robert and she is now taking Art as her degree.</p>
+            <h2>DELETE Request Test</h2>
+            <p>We will perform a DELETE request at the URL localhost:8080/api/students/28</p>
+            <img
+            class="img-fluid mt-2"
+            src="assets/img/postman/delete-2.jpg"
+            alt="Default Spring Boot configurate Website"
+            />
+            <span class="caption text-muted"
+            >DELETE Request - Delete Object</span
+            >
+            <p>We will delete the student with the studentId 28.</p>
+            <img
+            class="img-fluid mt-2"
+            src="assets/img/postman/delete-1.jpg"
+            alt="Default Spring Boot configurate Website"
+            />
+            <span class="caption text-muted"
+            >DELETE Request - Delete Object</span
+            >
+            <p>As you can see there is no student in the database with the ID 28 anymore.</p>
+            <p>Success, all the test worked and the application is fully up and running. Wooo!</p>
+            <section>
+              <h1>More Info</h1>
+              <p>Thank you for reading my guide to setting up a simple REST application. </p>
+                <p>The github code for the project can be found <a href="https://github.com/Arctos238/REST-CRUD-Demo-Application-Blog">here</a>.</p>
+              <p>If you would like to learn more about Spring and Spring Boot, please check out <a href="https://www.udemy.com/course/spring-hibernate-tutorial/">this</a> course of Udemy.</p>
+            </section>
+          </section>
           </div>
         </div>
       </div>
