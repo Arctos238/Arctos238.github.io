@@ -158,12 +158,12 @@
                 </p>
                 <p>
                   It will create a user for the MySQL data, with the username
-                  StudentAdmin (password = password of course, because its the
-                  most secure password known to man).
+                  StudentAdmin (password = password of course, because it's the
+                  most secure password that is known to man).
                 </p>
                 <p>
                   Then the script will create a few tables, which I will go into
-                  more depth with later. After the tables have been created it
+                  more depth later. After the tables have been created it
                   will enter some dummy data to get us started.
                 </p>
                 <p>
@@ -187,8 +187,8 @@
               <section>
                 <h3>Downloading the Spring Boot Starter Project</h3>
                 <p>
-                  Lastly we will configure the project and download the project
-                  initializr files
+                  Lastly, we will configure the project and download the project
+                  initializer files
                 </p>
                 <p>
                   Go to
@@ -198,15 +198,15 @@
                     target="_blank"
                     >this</a
                   >
-                  website to configurate the starter project.
+                  website to configure the starter project.
                 </p>
                 <img
                   class="img-fluid mt-2"
                   src="assets/img/spring-boot-init-first.jpg"
-                  alt="Default Spring Boot configurate Website"
+                  alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
-                  >Default Configurate Page Spring Boot</span
+                  >Default configure Page Spring Boot</span
                 >
                 <p>Configuration: 
                   <ol>
@@ -247,12 +247,12 @@
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/spring-boot-init-second.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
-                >Demo Configurate Page Spring Boot</span
+                >Demo configure Page Spring Boot</span
                 >
-                <p>Click generate to download initalizr project. Click <a href="./assets/files/demo.zip" download>here</a> to download initalizr project if you don't want to generate your own.</p>
+                <p>Click generate to download the initalizr project. Click <a href="./assets/files/demo.zip" download>here</a> to download project if you don't want to generate your own.</p>
               </section>
               <section>
                 <h3>Import the Maven Project</h3>
@@ -261,7 +261,7 @@
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/eclipse-help-install-one.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >First Steps to Importing</span
@@ -270,7 +270,7 @@
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/eclipse-help-install-two.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >Second Steps to Importing</span
@@ -279,7 +279,7 @@
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/eclipse-help-install-three.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >Successfully Imported Project</span
@@ -291,28 +291,27 @@
                 Configurations
               </h2>
               <p>
-                We just need to configurate the application to link to our database. Click <a
+                We just need to configure the application to link to our database. Click <a
                 href="./assets/files/application.properties"
                 download
                 target="_blank"
                 >this</a
-              > for the config file which needs to be  saved under src/main/resources (there is a file already there ethier copy and paste or delete and replace).
-              </p>
+              > for the config file which needs to be saved under src/main/resources (there is a file already there, replace this).</p>
               <img
                 class="img-fluid mt-2"
                 src="assets/img/application_props.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >Config File loc - inside</span
                 >
-                <p>The JDBC properties are the only important part here. They are just to connect hibernate (database java) to mysql.</p>
+                <p>The JDBC properties are the only important part here. They are just to connect hibernate (database java) to MySQL.</p>
                 <ul>
                   <li>url = Url to connect to database.</li>
                   <li>username = Username to connect to DB.</li>
                   <li>password = Password to connect to DB.</li>
-                  <li>dialect = MySQL5Dialect to tell hibernate that the DB is MySQL and that this is the langauage to interact with the application.</li>
-                  <li>port = Normally set to 8080 but you can set it to any port number you have avaiable</li>
+                  <li>dialect = MySQL5Dialect to tell hibernate that the DB is MySQL and that this is the language to interact with the application.</li>
+                  <li>port = Normally set to 8080 but you can set it to any port number you have available.</li>
                 </ul>
                 </section>
                 <section> 
@@ -320,24 +319,24 @@
                   <p>This section is about programming the application. I will keep things short and explain the important details as we go along.</p>
                 <section name="application-part">
                   <h2 class="section-heading" style="margin-bottom: 20px">Entity/POJO</h2>
-                  <p>First we will create the entities for the application. Student and Degree willl be our entities.</p>
-                  <p>We will create a package called entity (crud.rest.demo.entity). This package must be under this domain in order for the Spring Boot application to scan the annotations automatically.</p>
-                  <p>Then we will create two entities under that package, Student and Degree. Lets start with coding the Student Entity.</p>
+                  <p>First we will create the entities for the application. Student and Degree will be our entities.</p>
+                  <p>We will create a package called entity (crud.rest.demo.entity). This package must be under this domain for the Spring Boot application to scan the annotations automatically.</p>
+                  <p>Then we will create two entities under that package, Student and Degree. Let's start with coding the Student Entity.</p>
                   <img
                 class="img-fluid mt-2"
                 src="assets/img/entity/student_first.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >Student Class Fields</span
                 >
-                <p>We create the class like we would normally create an object inside java but we add the two annotations.</p>
-                <p>The first annotation @Entity informs Spring that this class is a entity.</p>
-                <p>The second anotation @Table informs hibernate that this entity is attached to the student table under the students schema.</p>
+                <p>We create the class as we would normally create an object inside java but we add the two annotations.</p>
+                <p>The first annotation @Entity informs Spring that this class is an entity.</p>
+                <p>The second anotation @Table informs hibernate that this entity is attached to the student table under the schema callled "students".</p>
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/entity/student_second.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >Student Class Fields</span
@@ -345,19 +344,19 @@
                 <p>Next we start by creating the fields linked to that table. The id field will have three annotations.</p>
                 <ul>
                   <li>@ID = Informs hibernate that this is an ID field</li>
-                  <li>@GeneratedValue = Informs hibernate that the value will be auto generated</li>
+                  <li>@GeneratedValue = Informs hibernate that the value will be auto-generated</li>
                   <li>@Column = Links this field to the column on that table</li>
                 </ul>
                 <p>We will then continue to only add the @Column to the rest of the field until we get to the Degree field.</p>
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/entity/student_third.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >Student Class Fields</span
                 >
-                <p>For the Degree field we need to added two new notations</p>
+                <p>For the Degree field we need to add two new notations</p>
                 <ul>
                   <li>@OneToOne = Inform hibernate that there is a One To One relationship with this object/table</li>
                   <li>@JoinColumn = Links the Student table to the Degree table with the column stated</li>
@@ -365,7 +364,7 @@
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/entity/student_4.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >Student Class - Constructors</span
@@ -374,7 +373,7 @@
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/entity/student_5.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >Student Class - Getters/Setters</span
@@ -383,7 +382,7 @@
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/entity/degree1.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >Degree Class</span
@@ -399,7 +398,7 @@
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/DAO/student_interface.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >StudentDAO Interface</span
@@ -415,22 +414,22 @@
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/DAO/dao-1.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >StudentDAO class</span
                 >
-                <p>We start by creating the class, implementing the interface and create a field. The EntityManager object is what connect to the database and has pre-built methods for us to use within our methods to perform the CRUD operations.</p>
+                <p>We start by creating the class, implementing the interface, and creating a field. The EntityManager object is what connects to the database and has pre-built methods for us to use within our methods to perform the CRUD operations.</p>
                 <p>We use the annotation @Autowired to tell Spring to create this object, using this constructor when the application initalizes.</p>
                 <img
                 class="img-fluid mt-2"
                 src="assets/img/DAO/dao-3.jpg"
-                alt="Default Spring Boot configurate Website"
+                alt="Default Spring Boot configure Website"
                 />
                 <span class="caption text-muted"
                 >StudentDAO class</span
                 >
-                <p>Then inside of each method we perform the operations using the entityManager object. We will use the operations below to create the methods.</p>
+                <p>Then inside each method we perform the operations using the entityManager object. We will use the operations below to create the methods.</p>
                 <ul>
                   <li>@Transactional = Creates a single transaction for this method.</li>
                   <li>currentSession.createQuery = Create a query to perform on the database.</li>
@@ -439,21 +438,21 @@
                   <li>currentSession.find = Creates an object from the table with this ID.</li>
                   <li>currentSession.delete = Delete the record from the table inside the database from the object passed.</li>
                 </ul>
-                <p>Now that all theses methods are created, we can move on to the final part of the application.</p>
+                <p>Now that all these methods are created, we can move on to the final part of the application.</p>
             </section>
                 <section>
                   <h2 class="section-heading" style="margin-bottom: 20px">Rest Controller</h2>
                   <p>Next we are going to create the REST Controller for this application. The controller is used to map the endpoints with the HTTP requests and control the data coming in and out.</p>
-                  <p>Let start with the boiler plate for the Student Rest Controller Class.</p>
+                  <p>Let's start with the boilerplate for the Student Rest Controller Class.</p>
                   <img
                   class="img-fluid mt-2"
                   src="assets/img/restController/controller1.jpg"
-                  alt="Default Spring Boot configurate Website"
+                  alt="Default Spring Boot configure Website"
                   />
                   <span class="caption text-muted"
                   >Student Rest Class</span
                   >
-                  <p>We create the class and initalize the class with the studentDAO object in order to perform the operations. </p>
+                  <p>We create the class and initialize the class with the studentDAO object in order to perform the operations. </p>
                   <ul>
                     <li>@RestController - Informs Spring that this is a Rest Controller class.</li>
                     <li>@RequestMapping - Create an endpoint at the string passed (localhost:8080/api).</li>
@@ -462,24 +461,24 @@
                   <img
                   class="img-fluid mt-2"
                   src="assets/img/restController/controller2.jpg"
-                  alt="Default Spring Boot configurate Website"
+                  alt="Default Spring Boot configure Website"
                   />
                   <span class="caption text-muted"
                   >Student Rest Class</span
                   >
                   <ul>
                     <li>@GetMapping - Creates a GET endpoint at localhost:8080/api/students, which will be used to obtain the students from the database.</li>
-                    <li>@PostMapping - Creates a POST endpoint at localhost:8080/api/students, which will be used to save a new student to the database.</li>
-                    <li>@PutMapping - Creates a PUT endpoint at localhost:8080/api/students, which will be used to update a student to the database.</li>
+                    <li>@PostMapping - Creates a POST endpoint at localhost:8080/api/students, which will be used to save a new student in the database.</li>
+                    <li>@PutMapping - Creates a PUT endpoint at localhost:8080/api/students, which will be used to update a student in the database.</li>
                     <li>@DeleteMapping - Creates a DELETE endpoint at localhost:8080/api/students/{studentId}, which will be used to delete a student from the database with the student id (replace the {studentId with the id you want to replace}).</li>
-                    <li>@RequestBody - Obtains the JSON inside the body of the request and creates a student object (jackson automatically converts the JSON for us). </li>
+                    <li>@RequestBody - Obtains the JSON inside the body of the request and creates a student object (Jackson automatically converts the JSON for us). </li>
                     <li>@PathVariable - Converts the {studentId} into an int for the method to use.</li>
                   </ul>
-                  <p>Now we just finish writing the methods by using the StudentDAO class to perform the CRUD operations for us.</p>
+                  <p>Now we just need to finish writing the methods by using the StudentDAO class to perform the CRUD operations for us.</p>
                   <img
                   class="img-fluid mt-2"
                   src="assets/img/restController/controller3.jpg"
-                  alt="Default Spring Boot configurate Website"
+                  alt="Default Spring Boot configure Website"
                   />
                   <span class="caption text-muted"
                   >Student Rest Class</span
@@ -488,25 +487,25 @@
              </section>
              <section>
               <h1>Testing</h1>
-              <p>Now we will test each endpoint to ensure that they are working. For this we will use the Postman application. You can download it <a href="https://www.postman.com/downloads/">here</a>.</p>
-              <p>Postman just allows us to perform HTTP request, which will allow us test our REST application.</p>
+              <p>Now we will test each endpoint to ensure that they are working. , the Postman application. You can download it <a href="https://www.postman.com/downloads/">here</a>.</p>
+              <p>Postman allows us to perform HTTP requests, which we will use to test our REST application.</p>
               <h2>GET Request Test</h2>
               <p>We will perform a GET request at the URL localhost:8080/api/students</p>
               <img
                   class="img-fluid mt-2"
                   src="assets/img/postman/findAll.jpg"
-                  alt="Default Spring Boot configurate Website"
+                  alt="Default Spring Boot configure Website"
                   />
                   <span class="caption text-muted"
                   >GET Request</span
                   >
-              <p>At the bottom, we can see that all the student have been converted into JSON for us, which was obtained from the database.</p>
+              <p>At the bottom, we can see that all the students have been converted into JSON for us, which was obtained from the database.</p>
               <h2>POST Request Test</h2>
               <p>We will perform a POST request at the URL localhost:8080/api/students</p>
               <img
                   class="img-fluid mt-2"
                   src="assets/img/postman/save-1.jpg"
-                  alt="Default Spring Boot configurate Website"
+                  alt="Default Spring Boot configure Website"
                   />
                   <span class="caption text-muted"
                   >POST Request</span
@@ -515,7 +514,7 @@
             <img
             class="img-fluid mt-2"
             src="assets/img/postman/save-2.jpg"
-            alt="Default Spring Boot configurate Website"
+            alt="Default Spring Boot configure Website"
             />
             <span class="caption text-muted"
             >POST Request - Complete</span
@@ -527,7 +526,7 @@
             <img
             class="img-fluid mt-2"
             src="assets/img/postman/update-1.jpg"
-            alt="Default Spring Boot configurate Website"
+            alt="Default Spring Boot configure Website"
             />
             <span class="caption text-muted"
             >PUT Request - Obtain Object</span
@@ -536,28 +535,28 @@
             <img
             class="img-fluid mt-2"
             src="assets/img/postman/update-2.jpg"
-            alt="Default Spring Boot configurate Website"
+            alt="Default Spring Boot configure Website"
             />
             <span class="caption text-muted"
             >PUT Request - Update Object</span
             >
-            <p>Lets change her last name to Robert and here degree to id 8.</p>
+            <p>Lets change her last name to Robert and her degree to id 8.</p>
             <img
             class="img-fluid mt-2"
             src="assets/img/postman/update-3.jpg"
-            alt="Default Spring Boot configurate Website"
+            alt="Default Spring Boot configure Website"
             />
             <span class="caption text-muted"
             >PUT Request - Complete</span
             >
             </section>
-            <p>As you can see here last name has changed to robert and she is now taking Art as her degree.</p>
+            <p>As you can see here the last name has changed to Robert and she is now taking Art as her degree.</p>
             <h2>DELETE Request Test</h2>
             <p>We will perform a DELETE request at the URL localhost:8080/api/students/28</p>
             <img
             class="img-fluid mt-2"
             src="assets/img/postman/delete-2.jpg"
-            alt="Default Spring Boot configurate Website"
+            alt="Default Spring Boot configure Website"
             />
             <span class="caption text-muted"
             >DELETE Request - Delete Object</span
@@ -566,17 +565,17 @@
             <img
             class="img-fluid mt-2"
             src="assets/img/postman/delete-1.jpg"
-            alt="Default Spring Boot configurate Website"
+            alt="Default Spring Boot configure Website"
             />
             <span class="caption text-muted"
             >DELETE Request - Delete Object</span
             >
-            <p>As you can see there is no student in the database with the ID 28 anymore.</p>
+            <p>As you can see there is no student in the database with ID 28 anymore.</p>
             <p>Success, all the test worked and the application is fully up and running. Wooo!</p>
             <section>
               <h1>More Info</h1>
               <p>Thank you for reading my guide to setting up a simple REST application. </p>
-                <p>The github code for the project can be found <a href="https://github.com/Arctos238/REST-CRUD-Demo-Application-Blog">here</a>.</p>
+                <p>The GitHub code for the project can be found <a href="https://github.com/Arctos238/REST-CRUD-Demo-Application-Blog">here</a>.</p>
               <p>If you would like to learn more about Spring and Spring Boot, please check out <a href="https://www.udemy.com/course/spring-hibernate-tutorial/">this</a> course of Udemy.</p>
             </section>
           </section>
